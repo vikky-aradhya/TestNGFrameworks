@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Test Suite">
+	<listeners>
+		<listener class-name="listeners.CustomListner" />
+	</listeners>
+	<test name="TestNG Test">
+		<parameter name="Browser" value="chrome" />
+		<parameter name="username" value="mercury" />
+		<parameter name="password" value="mercury" />
+		<classes>
+			<class name="stepDefinitions.OpenApp" />
+			<class name="stepDefinitions.Register" />
+			<class name="stepDefinitions.Login" />
+		</classes>
+	</test>
+</suite>
