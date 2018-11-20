@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Test Suite]">
+  <listeners>
+    <listener class-name="listeners.CustomListner"/>
+  </listeners>
+  <test thread-count="5" name="TestNG Test(failed)">
+    <parameter name="password" value="mercury"/>
+    <parameter name="Browser" value="chrome"/>
+    <parameter name="username" value="mercury"/>
+    <classes>
+      <class name="stepDefinitions.Login">
+        <methods>
+          <include name="user_enters_the_password" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- stepDefinitions.Login -->
+    </classes>
+  </test> <!-- TestNG Test(failed) -->
+</suite> <!-- Failed suite [Test Suite] -->
